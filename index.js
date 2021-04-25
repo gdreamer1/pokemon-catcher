@@ -37,19 +37,22 @@ function renderPokemonInfo (pokemonInfo, pokemonDiv) {
     const pokemonName = document.createElement('h3')
     pokemonName.innerHTML = pokemonInfo.name.toUpperCase()
     const pokemonStatsDiv = document.createElement('div')
-    pokemonStatsDiv.style.display = "flex"
-    pokemonStatsDiv.style.flexDirection = "row"
-    pokemonStatsDiv.style.justifyContent = "space-evenly"
+    pokemonStatsDiv.id = "pokemon-stats-container"
+
     pokemonInfo.stats.forEach((individualStat) => {
+        const pokemonStatDiv = document.createElement('disv')
+        pokemonStatDiv.id = "pokemon-stat"
+
         const statName = individualStat.stat.name
         const baseStat = individualStat.base_stat
         const statNameHead = document.createElement('h5')
         statNameHead.innerHTML = "Stat Name: " + statName
         const baseStatHead = document.createElement('h5')
         baseStatHead.innerHTML = "Base Stat: " + baseStat
-        pokemonStatsDiv.appendChild(statNameHead)
-        pokemonStatsDiv.appendChild(baseStatHead)
-        
+        pokemonStatDiv.appendChild(statNameHead)
+        pokemonStatDiv.appendChild(baseStatHead)
+
+        pokemonStatsDiv.appendChild(pokemonStatDiv)
     })
 
     pokemonDiv.appendChild(pokemonImage)

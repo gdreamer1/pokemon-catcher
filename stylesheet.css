@@ -9,3 +9,26 @@ body {
 #release-button {
     background-color: lightcoral;
 }
+
+#pokemon-stats-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 700px) {
+    #pokemon-stats-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+} 
+
+#pokemon-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
