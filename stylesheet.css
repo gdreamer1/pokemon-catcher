@@ -1,0 +1,11 @@
+body {
+    background-color: yellow;
+}
+
+#catch-button {
+  background-color: aquamarine;  
+}
+
+#release-button {
+    background-color: lightcoral;
+}
